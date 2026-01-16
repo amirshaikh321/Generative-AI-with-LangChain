@@ -11,10 +11,19 @@ llm = HuggingFaceEndpoint(
 )
 model = ChatHuggingFace(llm=llm)
 
+st.markdown("""
+<h1 style='text-align: center;'>🚗 AutoInfo AI 🏍️</h1>
+<p style='text-align: center; color: gray;'>
+Your smart assistant for cars & bikes information, comparisons, and buying advice
+</p>
+""", unsafe_allow_html=True)
 
-st.header("AutoInfo AI 🚗🏍️")
 
-user_input = st.text_input("Ask what info you want about cars and bikes.")
+user_input = st.text_input(
+    "Ask about cars & bikes",
+    placeholder="e.g. Compare Honda City vs Hyundai Verna"
+)
+
 
 
 tempelate = PromptTemplate(
@@ -43,8 +52,16 @@ input_variables=['question']
 prompt = tempelate.invoke({
     'question': user_input
 })
+col1, col2, col3 = st.columns([1, 2, 1])
+with col2:
+    run = st.button("⚡ Run AI", use_container_width=True)
 
 
-if st.button('⚡ Run AI'):
-    result = model.invoke(prompt)
-    st.write(result.content)
+if run and user_input:
+    with st.spinner("AutoInfo AI is thinking..."):
+        result = model.invoke(prompt)
+        st.success("Answer generated ✅")
+        st.markdown(result.content)
+
+if run and not user_input:
+    st.warning("Please enter a question about cars or bikes 🚘")
