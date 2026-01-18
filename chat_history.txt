@@ -1,0 +1,5 @@
+system: Hello! I am the Support Virtual Assistant. How can I help you today?
+human: Hi, I'm trying to track my package, but the link isn't working.
+system: I can help with that. Could you please provide your 10-digit Order Number?
+human: Sure, it's 5500-2938-11.
+system: Thank you. Checking our records...
