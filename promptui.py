@@ -3,7 +3,7 @@ from dotenv import load_dotenv
 import streamlit as st
 
 load_dotenv()
-llm = HuggingFaceEndpoint(repo_id="deepseek-ai/DeepSeek-V3.2",
+llm = HuggingFaceEndpoint(repo_id="meta-llama/Meta-Llama-3-8B-Instruct",
                           task="text-generation")
 
 model = ChatHuggingFace(llm=llm)
