@@ -1,4 +1,6 @@
 from langchain_huggingface import HuggingFacePipeline, ChatHuggingFace
+from dotenv import load_dotenv
+load_dotenv()
 
 llm = HuggingFacePipeline.from_model_id(
     model_id='MiniMaxAI/MiniMax-M2.1',
