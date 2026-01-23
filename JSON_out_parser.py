@@ -16,4 +16,5 @@ template = PromptTemplate(template='Give me 5 facts about {topic}\n {format_inst
                           partial_variables={'format_instruction':parser.get_format_instructions})
 prompt = template.invoke({'topic':'black hole'})
 result = model.invoke(prompt)
-print(result.content)
+final_result = parser.parse(result.content)
+print(final_result)
