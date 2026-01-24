@@ -30,4 +30,5 @@ template = PromptTemplate(
 chain = template | model | parser
 
 response = chain.invoke({})
+
 print(response)
