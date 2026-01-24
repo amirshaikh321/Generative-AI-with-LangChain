@@ -33,5 +33,7 @@ JSON_schema = {
 }
 
 sturctured_model = model.with_structured_output(JSON_schema)
+
 result = sturctured_model.invoke("I just watched Inception and it was mind-blowing! A solid 9.")
+
 print(result)
