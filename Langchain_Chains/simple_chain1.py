@@ -10,7 +10,7 @@ llm = HuggingFaceEndpoint(
 model = ChatHuggingFace(llm = llm)
 
 prompt = PromptTemplate(
-    template='Give me 5 facts about the {topic}',
+    template='Give me 10 facts about the {topic}',
     input_variables=['topic']
 )
 
@@ -18,5 +18,5 @@ parser = StrOutputParser()
 
 chain = prompt | model | parser
 
-result = chain.invoke({'topic':'cricket'})
+result = chain.invoke({'topic':'java'})
 print(result)
