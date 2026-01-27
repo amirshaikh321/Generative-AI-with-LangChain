@@ -52,8 +52,8 @@ Generative-AI-Learning/
 ---
 
 ## 📬 Connect
-- LinkedIn: [Your LinkedIn URL]  
-- GitHub: [Your GitHub Profile]  
+- [LinkedIn](https://www.linkedin.com/in/amir-shaikh-75aaa1251/)
+- [GitHub](https://github.com/amirshaikh321)
 
 ---
 
