@@ -32,7 +32,6 @@ Generative-AI-Learning/
 │
 ├── Notebooks/ # Jupyter notebooks for experiments and tutorials
 ├── Projects/ # Mini-projects built using LLMs and LangChain
-├── Notes/ # Markdown notes, cheat sheets, and learning materials
 ├── Data/ # Sample datasets for experimentation
 └── README.md # This file
 
