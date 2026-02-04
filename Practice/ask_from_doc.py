@@ -23,7 +23,7 @@ st.set_page_config(page_title="Ai", page_icon="📁")
 st.title("Ask From documents")
 
 uploaded_file = st.file_uploader(
-    "Upload a file",
+    "📂 Upload Your Document",
     type=["csv", "pdf", "txt", "docx"]
 )
 UPLOAD_DIR = "uploaded_files"
@@ -36,12 +36,12 @@ if uploaded_file:
         f.write(uploaded_file.getbuffer())
 
 question = st.text_input(
-    "Ask about cars & bikes",
-    placeholder="e.g. Compare Honda City vs Hyundai Verna"
+    "💬 Ask a Question from Your File",
+    placeholder="e.g. What is Topic of Document"
 )
 col1, col2, col3 = st.columns([1, 2, 1])
 with col2:
-    run = st.button("⚡ Run AI", use_container_width=True)
+    run = st.button("🤖 Analyze Document", use_container_width=True)
 
 
 if run and uploaded_file is not None:
@@ -54,11 +54,16 @@ if run and uploaded_file is not None:
         loader = CSVLoader(file_path=str(file_path))
         docs = loader.load()
         result = chain.invoke({'question':question,'data':docs})
-        st.success('True')
+        st.success('Answer')
     if file_extension == '.pdf':
-        st.success('True')
+        loader = PyPDFLoader(file_path=str(file_path))
+        docs = loader.load()
+        result = chain.invoke({'question':question,'data':docs})
+        st.success('Answer')
     if file_extension == '.txt':
-        st.success('True')
-    # st.success("File uploaded successfully!")
+        loader = TextLoader(file_path=str(file_path))
+        docs = loader.load()
+        result = chain.invoke({'question':question,'data':docs})
+        st.success('Answer')
 
     st.markdown(result)
