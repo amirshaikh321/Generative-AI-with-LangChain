@@ -3,7 +3,7 @@ from pathlib import Path
 from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_core.output_parsers import StrOutputParser
 from langchain_core.prompts import PromptTemplate
-from langchain_community.document_loaders import CSVLoader, PyPDFLoader, TextLoader
+from langchain_community.document_loaders import CSVLoader, PyPDFLoader, TextLoader, Docx2txtLoader
 from dotenv import load_dotenv
 from pathlib import Path
 
@@ -62,6 +62,11 @@ if run and uploaded_file is not None:
         st.success('Answer')
     if file_extension == '.txt':
         loader = TextLoader(file_path=str(file_path))
+        docs = loader.load()
+        result = chain.invoke({'question':question,'data':docs})
+        st.success('Answer')
+    if file_extension == '.docs':
+        loader = Docx2txtLoader(file_path=str(file_path))
         docs = loader.load()
         result = chain.invoke({'question':question,'data':docs})
         st.success('Answer')
