@@ -1,0 +1,10 @@
+student_id,name,department,semester,attendance_percentage,status
+S101,Aarav Sharma,Computer Science,6,92,Regular
+S102,Diya Patel,Information Technology,6,78,Warning
+S103,Rohan Verma,Computer Science,6,85,Regular
+S104,Ananya Singh,Electronics,6,65,Low Attendance
+S105,Kabir Mehta,Mechanical,6,88,Regular
+S106,Priya Nair,Information Technology,6,73,Warning
+S107,Aditya Rao,Computer Science,6,95,Excellent
+S108,Neha Gupta,Electronics,6,69,Low Attendance
+S109,Shantanu shinde,Mechanical,6,65,Low Attendance
