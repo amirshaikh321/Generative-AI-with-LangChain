@@ -1,4 +1,4 @@
-from langchain_text_splitters import CharacterTextSplitter
+from langchain.text_splitter import CharacterTextSplitter
 from langchain_community.document_loaders import PyPDFLoader
 
 loader = PyPDFLoader(file_path='Text_splitter\RCB_IPL_Emotion.pdf')
