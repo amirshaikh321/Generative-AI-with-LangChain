@@ -1,4 +1,4 @@
-from langchain_text_splitters import RecursiveCharacterTextSplitter, Language
+from langchain.text_splitter import RecursiveCharacterTextSplitter, Language
 
 code = """# Engine
 GT 650 uses a 648cc parallel twin engine.

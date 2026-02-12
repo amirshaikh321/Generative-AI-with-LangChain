@@ -1,4 +1,4 @@
-from langchain_text_splitters import RecursiveCharacterTextSplitter
+from langchain.text_splitter import RecursiveCharacterTextSplitter
 
 text = """Artificial intelligence is changing how people work and learn.
 Small ideas grow into powerful systems when data, logic, and creativity come together.
