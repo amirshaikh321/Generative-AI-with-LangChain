@@ -9,3 +9,7 @@ def pyramid(n : int) ->int :
 
 result = pyramid.invoke({'n':5})
 print(result)
+
+print(pyramid.name)
+print(pyramid.description)
+print(pyramid.args)
