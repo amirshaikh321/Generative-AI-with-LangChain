@@ -3,14 +3,32 @@
 
 It helps you:
 
-Connect LLMs with data
+- Connect LLMs with data
 
-Add memory
+- Add memory
 
-Use tools
+- Use tools
 
-Build agents
+- Build agents
 
-Create RAG systems
+- Create RAG systems
 
-Structure multi-step AI workflows
+- Structure multi-step AI workflows
+
+Instead of just calling an LLM API directly, LangChain lets you build structured pipelines like:
+
+`User → Prompt → LLM → Tool → Memory → Output`
+
+# What Are Chat Models?
+
+**🧠 Definition**
+
+A Chat Model is a type of LLM designed to handle conversational messages instead of plain text.
+
+## Difference: LLM vs Chat Model
+| Feature              | LLM              | Chat Model                       |
+|----------------------|------------------|-----------------------------------|
+| Input Type           | Plain text       | Messages (System/User/Assistant) |
+| Conversation Support | No               | Yes                               |
+| Modern APIs          | Rare             | Yes                               |
+| Example              | text-davinci-003 | GPT-4, Gemini, Claude             |
