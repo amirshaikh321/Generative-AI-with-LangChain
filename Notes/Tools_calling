@@ -1,0 +1,50 @@
+# Tool Calling in LangChain
+
+## What is Tool Calling?
+
+**Definition:**
+
+Tool Calling is a feature that allows a language model to **automatically call external tools or functions** when needed to answer a user's query.
+
+Instead of only generating text, the model can:
+
+- Select the correct tool
+- Pass the required parameters
+- Execute the tool
+- Use the tool’s result to generate a final response
+
+
+---
+
+# Why Tool Calling is Needed
+
+Large Language Models have limitations:
+
+- Cannot access real-time information
+- Cannot perform complex calculations reliably
+- Cannot interact with APIs or databases
+
+Tool calling allows LLMs to overcome these limitations by integrating external capabilities.
+
+Examples:
+
+- Weather API
+- Calculator
+- Database query
+- Web search
+- File operations
+
+
+The model decides **when and which tool to use**.
+
+---
+
+# Example Tool
+
+```python
+from langchain_core.tools import tool
+
+@tool
+def multiply(a: int, b: int) -> int:
+    """Multiply two numbers."""
+    return a * b
