@@ -1,0 +1,199 @@
+# LangChain Learning Overview
+
+This repository documents my learning journey in **LangChain**, a framework used to build applications powered by **Large Language Models (LLMs)**. The goal is to understand how to design intelligent AI systems that can interact with data, tools, and external knowledge sources.
+
+---
+
+# Core Concepts Covered
+
+## 1. LangChain
+LangChain is a framework that helps developers build applications using large language models by connecting them with prompts, tools, memory, and external data sources.
+
+---
+
+## 2. Chat Models
+Chat models are conversational LLMs that process structured messages such as **system, user, and assistant** messages to generate responses.
+
+Example models:
+- GPT models
+- Gemini
+- Claude
+
+---
+
+## 3. Prompts
+Prompts are structured instructions given to the language model to guide its response.
+
+LangChain provides tools such as:
+- `PromptTemplate`
+- `ChatPromptTemplate`
+
+These allow dynamic and reusable prompt creation.
+
+---
+
+## 4. Output Parsers
+Output parsers convert raw LLM responses into structured formats such as:
+
+- JSON
+- Lists
+- Pydantic models
+
+This allows applications to easily process AI outputs.
+
+---
+
+## 5. Chains
+Chains connect multiple components such as prompts, models, and parsers into a workflow where the output of one step becomes the input of the next.
+
+Example:
+
+Prompt → Model → Output Parser
+
+
+---
+
+## 6. Runnables
+Runnables are the core interface in modern LangChain that allows components like prompts, models, and retrievers to be composed into flexible pipelines.
+
+Example:
+
+prompt | model | parser
+
+
+---
+
+# RAG (Retrieval-Augmented Generation) Components
+
+These components allow LLMs to access external knowledge.
+
+---
+
+## 7. Document Loaders
+Document loaders load data from sources such as:
+
+- Text files
+- PDFs
+- Websites
+- Databases
+
+They convert raw data into standardized **Document objects**.
+
+---
+
+## 8. Text Splitters
+Text splitters divide large documents into smaller chunks so they can be processed efficiently by language models.
+
+Common splitter:
+- `RecursiveCharacterTextSplitter`
+
+---
+
+## 9. Embeddings
+Embeddings convert text into numerical vectors that represent semantic meaning.
+
+These vectors allow similarity-based search.
+
+---
+
+## 10. Vector Stores
+Vector stores are databases used to store embeddings and perform similarity search.
+
+Examples:
+- FAISS
+- Chroma
+- Pinecone
+- Weaviate
+
+---
+
+## 11. Retrievers
+Retrievers fetch the most relevant documents from the vector store based on a user query.
+
+These documents are passed to the LLM for generating accurate responses.
+
+---
+
+## 12. Retrieval-Augmented Generation (RAG)
+RAG improves LLM responses by retrieving relevant documents from external data sources before generating an answer.
+
+Workflow:
+
+User Query<br>
+↓<br>
+Retriever<br>
+↓<br>
+Relevant Documents<br>
+↓<br>
+LLM<br>
+↓<br>
+Final Answer
+
+
+---
+
+# Advanced LangChain Concepts
+
+## 13. Tools
+Tools are external functions that the language model can use to perform tasks such as:
+
+- API calls
+- Calculations
+- Web search
+- Database queries
+
+---
+
+## 14. Tool Calling
+Tool calling allows the language model to automatically detect when a tool is needed and invoke it with the correct parameters.
+
+---
+
+## 15. Agents
+Agents allow LLMs to dynamically decide which tools to use and perform multi-step reasoning to solve complex tasks.
+
+Example workflow:
+
+User Query<br>
+↓<br>
+Agent<br>
+↓<br>
+Reasoning<br>
+↓<br>
+Tool Selection<br>
+↓<br>
+Execution<br>
+↓<br>
+Final Answer
+
+---
+
+# Overall LangChain Architecture
+
+User Input<br>
+↓<br>
+Prompt<br>
+↓<br>
+LLM<br>
+↓<br>
+Chains / Runnables<br>
+↓<br>
+Tools / Agents<br>
+↓<br>
+External Data (RAG)<br>
+↓<br>
+Final AI Response<br>
+
+
+---
+
+# Learning Outcome
+
+Through this learning process, I gained an understanding of how to build **LLM-powered applications** including:
+
+- AI chatbots
+- Knowledge-based assistants
+- RAG systems
+- Tool-enabled AI agents
+
+This knowledge forms the foundation for developing **production-ready Generative AI systems** using LangChain.
