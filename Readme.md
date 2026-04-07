@@ -29,12 +29,12 @@ The goal is to **understand Generative AI concepts**, practice real-world exampl
 
 ## 📂 Repository Structure
 Generative-AI-Learning/
-│
-├── Notebooks/ # Jupyter notebooks for experiments and tutorials
-├── Projects/ # Mini-projects built using LLMs and LangChain
-├── Notes/ # Markdown notes, cheat sheets, and learning materials
-├── Data/ # Sample datasets for experimentation
-└── README.md # This file
+│<br>
+├── Notebooks/ # Jupyter notebooks for experiments and tutorials<br>
+├── Projects/ # Mini-projects built using LLMs and LangChain<br>
+├── Notes/ # Markdown notes, cheat sheets, and learning materials<br>
+├── Data/ # Sample datasets for experimentation<br>
+└── README.md # This file<br>
 
 
 ---
